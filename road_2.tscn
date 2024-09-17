@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfdnl5ey11xbg"]
+
+[ext_resource type="PackedScene" uid="uid://bdyhul3ukaj5s" path="res://Models/Road/road.glb" id="1_asrc1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lk8b8"]
+albedo_color = Color(0.0807402, 0.144688, 0.127992, 1)
+
+[node name="road2" instance=ExtResource("1_asrc1")]
+
+[node name="road" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_lk8b8")
