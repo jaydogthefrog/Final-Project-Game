@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://d4k6f1pqjlsbf"]
+[gd_scene load_steps=18 format=3 uid="uid://d4k6f1pqjlsbf"]
 
 [ext_resource type="Texture2D" uid="uid://2lucjebt1sx4" path="res://Textures/earth-texture/696.jpg" id="1_03r3y"]
 [ext_resource type="Script" path="res://player.gd" id="1_nktui"]
@@ -6,6 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://doqew7fbogs7i" path="res://crypt.tscn" id="3_a52r5"]
 [ext_resource type="PackedScene" uid="uid://bl4nqsb2poad" path="res://brick_wall_2.tscn" id="5_hocg0"]
 [ext_resource type="PackedScene" uid="uid://cmcr775v25pe0" path="res://brick_wall_end_2.tscn" id="6_daun6"]
+[ext_resource type="PackedScene" uid="uid://02n3pkd3j2x7" path="res://grave_2.tscn" id="7_tbipl"]
+[ext_resource type="PackedScene" uid="uid://cv4q2oddpa16n" path="res://gravestone_bevel_2.tscn" id="8_267nq"]
+[ext_resource type="PackedScene" uid="uid://dt6aixs0hw82l" path="res://gravestone_debris_2.tscn" id="9_ylm6n"]
+[ext_resource type="PackedScene" uid="uid://j7rgjr237lfg" path="res://iron_fence_2.tscn" id="10_2lqmt"]
+[ext_resource type="PackedScene" uid="uid://bs3edo7hshl84" path="res://iron_fence_damaged_2.tscn" id="11_ipvns"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j1qo3"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -411,6 +416,7 @@ transform = Transform3D(1.12, 0, 0, 0, 1.12, 0, 0, 0, 1.12, 0, 0, 0)
 
 [node name="Player" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.432827, 0.442225, -5.69905)
+floor_max_angle = 1.0472
 script = ExtResource("1_nktui")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
@@ -467,3 +473,90 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.4035
 
 [node name="brick-wall-end3" parent="Wall" instance=ExtResource("6_daun6")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.40635, 0.160566, -5.08242)
+
+[node name="grave2" parent="." instance=ExtResource("7_tbipl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.8915, 0.157814, -13.5096)
+
+[node name="grave3" parent="." instance=ExtResource("7_tbipl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.61559, 0.157814, -13.5096)
+
+[node name="grave4" parent="." instance=ExtResource("7_tbipl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.42085, 0.157814, -13.5096)
+
+[node name="grave5" parent="." instance=ExtResource("7_tbipl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8551, 0.157814, -13.5096)
+
+[node name="grave6" parent="." instance=ExtResource("7_tbipl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.98788, 0.157814, -13.5096)
+
+[node name="grave7" parent="." instance=ExtResource("7_tbipl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2638, 0.157814, -13.5096)
+
+[node name="gravestone-bevel2" parent="." instance=ExtResource("8_267nq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.818, 0.157811, -14.6568)
+
+[node name="gravestone-bevel4" parent="." instance=ExtResource("8_267nq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.28588, 0.157811, -14.6568)
+
+[node name="gravestone-bevel6" parent="." instance=ExtResource("8_267nq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1109, 0.157811, -14.6568)
+
+[node name="gravestone-bevel7" parent="." instance=ExtResource("8_267nq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4671, 0.157811, -14.6568)
+
+[node name="grave8" parent="." instance=ExtResource("7_tbipl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.8915, 0.157814, -20.6432)
+
+[node name="grave9" parent="." instance=ExtResource("7_tbipl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.61559, 0.157814, -20.6432)
+
+[node name="grave10" parent="." instance=ExtResource("7_tbipl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.42085, 0.157814, -20.6432)
+
+[node name="grave11" parent="." instance=ExtResource("7_tbipl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8551, 0.157814, -20.6432)
+
+[node name="grave12" parent="." instance=ExtResource("7_tbipl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.98788, 0.157814, -20.6432)
+
+[node name="grave13" parent="." instance=ExtResource("7_tbipl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2638, 0.157814, -20.6432)
+
+[node name="gravestone-bevel9" parent="." instance=ExtResource("8_267nq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.46176, 0.157811, -21.7904)
+
+[node name="gravestone-bevel10" parent="." instance=ExtResource("8_267nq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.28588, 0.157811, -21.7904)
+
+[node name="gravestone-bevel11" parent="." instance=ExtResource("8_267nq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.00722, 0.157811, -21.7904)
+
+[node name="gravestone-bevel13" parent="." instance=ExtResource("8_267nq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4671, 0.157811, -21.7904)
+
+[node name="gravestone-debris2" parent="." instance=ExtResource("9_ylm6n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.52792, 0.157812, -14.5392)
+
+[node name="gravestone-debris3" parent="." instance=ExtResource("9_ylm6n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.97741, 0.157812, -14.5392)
+
+[node name="gravestone-debris4" parent="." instance=ExtResource("9_ylm6n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7806, 0.157812, -21.8479)
+
+[node name="gravestone-debris5" parent="." instance=ExtResource("9_ylm6n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.08279, 0.157812, -21.7742)
+
+[node name="iron-fence2" parent="." instance=ExtResource("10_2lqmt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5018, 0, -10.8149)
+
+[node name="iron-fence4" parent="." instance=ExtResource("10_2lqmt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.12335, 0, -10.8149)
+
+[node name="iron-fence5" parent="." instance=ExtResource("10_2lqmt")]
+transform = Transform3D(0.73322, 0.679992, -2.97234e-08, 0, -4.37114e-08, -1, -0.679992, 0.73322, -3.20501e-08, 2.59144, -0.945101, -12.6399)
+
+[node name="iron-fence6" parent="." instance=ExtResource("10_2lqmt")]
+transform = Transform3D(-0.0913626, -0.995818, 4.35286e-08, 6.63677e-16, -4.37114e-08, -1, 0.995818, -0.0913625, 3.99358e-09, 1.46639, -0.945101, -12.0778)
+
+[node name="iron-fence-damaged2" parent="." instance=ExtResource("11_ipvns")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 8.30991, 0, -10.8148)
