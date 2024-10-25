@@ -1,0 +1,5 @@
+res://Scenes/World.tscn
+res://Scripts/Player.gd
+res://Scripts/Zombie.gd
+res://Scripts/World.gd
+res://Scripts/Bullet.gd
